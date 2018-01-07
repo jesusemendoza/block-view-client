@@ -1,0 +1,10 @@
+.block-view,h1, input,div, label {
+    margin: 0% auto;
+    text-align: center
+}
+
+#block-display {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    background-color: bisque;
+}

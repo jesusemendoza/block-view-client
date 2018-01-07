@@ -1,0 +1,119 @@
+<html<!DOCTYPE html>
+    <html lang="en">
+      <head>
+        <meta charset="UTF-8">
+        <title>Block View</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="styles/layout.css">
+    </head>
+      <body>
+        <header>
+          <nav class="topnav">
+              <a class="active" href="/" id="home">Home</a>
+              <a class="active" href="/output" id="myweather">My Weather</a>
+              <a class="active" href="/about" id="about">About Us</a>
+              <a class="active" href="/register" id="register">Register</a>
+              <a class="active" href="/login" id="login">Login</a>
+            </nav>
+            <script type="text/x-handlebars-template" id="weather-template">
+                <tr>
+                    <td>{{txId}}</td>
+                    <td>{{amount}}</td>
+                    <td id="dollar-{{txId}}">dollar value</td>
+                    <td>{{date}}</td>
+                </tr>
+              </script>
+        </header>
+        <main>
+             <!-- <section id="formview" class="login container">
+             <form class="form" id="form-login">
+               -->
+              
+           <!-- <section id="formview" class="login container">
+             <form class="form" id="form-login">
+              <h1>Login</h1>
+              <br>
+              <label>
+                <input type="text" id="username" placeholder="username" required></input>
+              </label>
+              <br>
+              <br>
+              <label>
+                <input type="password" id="password" placeholder="password" required></input>
+              </label>
+              <br>
+              <br><div>
+              <input type="button" id="login-submit" value="SUBMIT"/>
+            </form>
+          </section> -->
+          <!-- <section id="registerview" class="register container">
+              <form class="registerform" id="form-register">
+    
+                <h1>Register</h1>
+                <label>
+                 <br>
+                 <br>
+                  <input type="text" id="reg-username" placeholder="username" required></input>
+                </label>
+                <br>
+                <br>
+                <label>
+                  <input type="password" id="reg-password" placeholder="password" required></input>
+                </label>
+                <br>
+                <br>
+                <label>
+                  <input type="text" id="reg-email" placeholder="email" required></input>
+                </label>
+                <br>
+                <br>
+                <label>
+                  <input type="text" id="reg-zipcode" placeholder="zipcode" required></input>
+                </label>
+                <br>
+                <br>
+                <input type="button" id="reg-user-submit" value="SUBMIT"></input/>
+               </form>
+             </section> -->
+          <!-- <section class="block-view container">
+            <section id="block-display"></section>
+          </section> -->
+          <section class="block-view">
+                <h1>Ethereum Address</h1>
+          </section>
+          
+          <br>
+          <br>
+          <table class="block-view container">
+                <thead>
+                    <tr>
+                        <th>Transaction ID</th>
+                        <th>ETH Amount</th>
+                        <th>Dollar Value at time of TX</th>
+                        <th>Date</th>
+                    </tr>
+                </thead>
+                <tbody id="block-display"></tbody>
+            </table>
+            <br>
+              <label>
+                <input type="text" id="eth-address" placeholder="Ethereum Address" required></input>
+              </label>
+              <br>
+              <br><div>
+              <input type="button" id="eth-submit" value="SUBMIT"/>
+            </form>
+            </section>
+    
+        </main>
+        <footer>
+        </footer>
+          <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+          <script src="https://cdn.rawgit.com/visionmedia/page.js/master/page.js"></script>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.min.js"></script>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/0.3.6/marked.min.js"></script>
+          <script src="scripts/view/block-view.js"></script>
+          <script src="scripts/model/block.js"></script>
+          <script src="scripts/view/routes.js"></script>
+        </body>
+    </html>
