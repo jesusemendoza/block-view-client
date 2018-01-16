@@ -24,14 +24,17 @@ function ethTrans(address) {
 }
 function dollarVal(data) {
     
-        for(let i = 0; i < data.result.length; i++) { // list is an array, i is current index
+        for(let i = 0; i < data.result.length; i++) {
             setTimeout(function() {
                 $.get(`https://min-api.cryptocompare.com/data/pricehistorical?fsym=ETH&tsyms=BTC,USD,EUR&ts=${data.result[i].timeStamp}&extraParams=block_view`)
                 .then(res => $(`#dollar-${i}`).text(`${(res.ETH.USD * (data.result[i].value/1000000000000000000)).toFixed(2)}`))
-                .then(res => console.log(res.ETH))
+                .then(res => console.log(res))
+                .then(() => {
+                    if (i === data.result.length-1) return console.log('done')
+                });
             }, 200 * i) // With each iteration, the delay increases
           }
-          console.log('api calls complete')
+          
     }
 
 
