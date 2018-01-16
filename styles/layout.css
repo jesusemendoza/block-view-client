@@ -1,6 +1,7 @@
 .block-view,h1, input,div, label {
     margin: 0% auto;
-    text-align: center
+    text-align: center;
+    display: block;
 }
 
 #block-display {
@@ -8,3 +9,9 @@
     margin-bottom: 5px;
     background-color: bisque;
 }
+
+ #eth-submit {
+    margin: 0% auto;
+    text-align: center;
+    display: block;
+} 
